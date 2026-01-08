@@ -1,0 +1,17 @@
+# ------------------------------------------------------------
+# Grading System for a Quiz
+# This system automates the grading process for a quiz. It includes:
+# 1. Grading all students.
+# 2. Calculating the class average.
+# 3. Identifying the highest scorer(s).
+# 4. Displaying all class results.
+# ------------------------------------------------------------
+
+# Predefined data
+answer_key = ["A", "B", "B", "D"]  # Correct answers for the quiz
+student_answers = {
+    "john": ["A", "C", "B", "D"],
+    "jane": ["A", "B", "B", "D"],
+    "alice": ["A", "C", "C", "D"],
+    "bob": ["A", "B", "B", "D"]
+}
