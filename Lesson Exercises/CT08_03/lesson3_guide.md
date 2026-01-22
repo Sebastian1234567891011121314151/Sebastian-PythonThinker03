@@ -41,3 +41,18 @@ Assign a wallet balance to the customer (e.g., $10).​
 Before confirming an order, check if the total cost will exceed the customer’s wallet balance.​
 - If the total exceeds the wallet balance, display a message and do not add the item.​
 - If the total is within the wallet balance, confirm the order as usual and reduce the balance.
+
+
+## Challenge 2: Let Customers  Remove Items
+Enhance your program so that:
+
+Customers can type "remove [item]" to remove an item from their order.
+
+If the item exists in the order, remove it and update the total.
+
+Sample output (wallet insufficient)
+What would you like to order? remove Fries
+Fries has been removed from your order.
+
+What would you like to order? remove Burger
+Burger is not in your order.
