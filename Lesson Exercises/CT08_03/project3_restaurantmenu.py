@@ -21,27 +21,38 @@ for food,price in Menu.items():
 
 
 
-
 def ask_for_food():
-    smth=True
+
     Cost=0
-    question=input("What would you like to order? ")
-    while smth==True:
+    
+    while True:
+        question=input("What would you like to order? ")
+        
         if question in Menu:
             print("The "+question+" is $"+str(Menu[question]))
             question2=input("Do you want to add it to your order? (y/n)")
             if question2 =="y":
-                Order[question]=Menu[question]
+                # check for whether the key is already in the dict
+                if question in Order:
+                    Order[question]+=Menu[question]
+                else:
+                    Order[question]=Menu[question]
+                print(question+" has been added to ur order")
                 continue
             elif question2== "n":
+                print(question+" has not been added to ur order")
                 continue
             Cost=Cost+Order[question]
         elif question == "no more":
-            print("Ok, Thank you for your order!")
+            print("Ok, Thank you for your order!") 
+            print("---Order Summary---")
             for food2,price2 in Order.items():
                 print(f"{food2}:${price2:.2f}")
-                print(Cost)
-            smth=False
+            print("-------------------")
+            print("Total: "+Cost)
+            print("Your total bill is $"+Cost+" Enjoy your meal!")
+
+                
             break
         else:
             print("We don't have that item")
